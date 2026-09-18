@@ -41,14 +41,20 @@ public class Student {
 
     /**
      * Determines the graduation predicate based on GPA:
-     * - gpa >= 3.5           -> "Cum Laude"
-     * - 3.0 <= gpa < 3.5     -> "Very Satisfactory"
-     * - gpa < 3.0            -> "Satisfactory"
+     * - gpa >= 3.5 -> "Cum Laude"
+     * - 3.0 <= gpa < 3.5 -> "Very Satisfactory"
+     * - gpa < 3.0 -> "Satisfactory"
      *
      * @return graduation predicate
      */
     public String getPredicate() {
         // TODO: implement the predicate logic per the rules above
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (gpa >= 3.5) {
+            System.out.println("Cum Laude");
+        } else if (gpa <= 3.0 && gpa < 3.5) {
+            System.out.println("Very Satisfactory");
+        } else {
+            return ("Satisfactory");
+        }
     }
 }
